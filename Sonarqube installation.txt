@@ -1,0 +1,19 @@
+sudo apt update
+sudo apt install openjdk-17-jdk -y
+java -version
+wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-10.4.0.87267.zip
+sudo apt install unzip -y
+
+Alternate way using docker:
+
+sudo apt update
+sudo apt install docker.io -y
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo docker run -d --name sonarqube -p 9000:9000 sonarqube:community
+http://<your-server-ip>:9000
+
+
+sonar.projectKey=Onix-website   Project key
+
+sqa_3bf094ac05f10208e7b2ee4c8fd25ee402c41601  sonar token
